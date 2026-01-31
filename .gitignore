@@ -1,0 +1,8 @@
+.DS_Store
+*.zip
+*.log
+.idea/
+*.iml
+target/
+node_modules/
+.flattened-pom.xml
