@@ -296,8 +296,8 @@
         value: e.id,
       }));
     } catch (error) {
-      // eslint-disable-next-line no-console
-      console.log(error);
+      // API不存在时忽略错误，使用默认配置
+      orgOptions.value = [];
     }
   }
 

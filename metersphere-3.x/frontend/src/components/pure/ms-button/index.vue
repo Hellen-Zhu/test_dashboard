@@ -38,9 +38,12 @@
 
 <style lang="less" scoped>
   .ms-button {
-    @apply flex cursor-pointer items-center align-middle;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    vertical-align: middle;
     &:not(:last-child) {
-      @apply mr-4;
+      margin-right: 1rem;
     }
 
     padding: 0 4px;
@@ -76,7 +79,7 @@
     }
   }
   .ms-button-text {
-    @apply p-0;
+    padding: 0;
 
     color: rgb(var(--primary-5));
   }
@@ -102,7 +105,7 @@
     }
   }
   .ms-button--disabled {
-    @apply cursor-not-allowed;
+    cursor: not-allowed;
   }
   .ms-button--secondary--disabled {
     color: var(--color-text-brand);

@@ -151,8 +151,8 @@ const useUserStore = defineStore('user', {
         const res = await getAuthenticationList();
         this.loginType = res;
       } catch (error) {
-        // eslint-disable-next-line no-console
-        console.log(error);
+        // API不存在时使用默认本地登录方式
+        this.loginType = ['LOCAL'];
       }
     },
     // 登出回调

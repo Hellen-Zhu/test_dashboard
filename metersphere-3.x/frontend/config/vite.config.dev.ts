@@ -14,6 +14,9 @@ export default mergeConfig(
       fs: {
         strict: true,
       },
+      hmr: {
+        overlay: false,
+      },
       proxy: {
         '/ws': {
           target: process.env.VITE_DEV_DOMAIN,

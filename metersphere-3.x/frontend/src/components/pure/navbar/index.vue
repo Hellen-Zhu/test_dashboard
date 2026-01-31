@@ -400,7 +400,13 @@
 
 <style scoped lang="less">
   .navbar {
-    @apply flex h-full justify-between bg-transparent;
+    @apply flex justify-between bg-transparent;
+
+    height: 56px;
+    pointer-events: none;
+    > * {
+      pointer-events: auto;
+    }
   }
   .select-header-button.arco-btn-text:not(:disabled):hover {
     background-color: rgb(var(--primary-1)) !important;
@@ -409,8 +415,9 @@
     @apply flex flex-1 items-center;
   }
   .right-side {
-    @apply flex list-none;
+    @apply relative flex shrink-0 list-none;
 
+    width: fit-content;
     padding-right: 16px;
     gap: 8px;
     :deep(.locale-select) {
@@ -418,6 +425,8 @@
     }
     li {
       @apply flex items-center;
+
+      pointer-events: auto;
       .arco-btn-secondary {
         @apply !bg-transparent;
 
